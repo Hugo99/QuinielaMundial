@@ -285,7 +285,7 @@ export default function App() {
       {/* ── NAV ── */}
       <div style={{background:"#fff",borderBottom:`1px solid ${C.border}`,padding:"0 20px",position:"sticky",top:0,zIndex:10}}>
         <div style={{maxWidth:1100,margin:"0 auto",display:"flex",overflowX:"auto"}}>
-          {[{key:"tabla",label:"Tabla"},{key:"sorpresas",label:"Sorpresas 👀"},{key:"grupos",label:"Grupos"},{key:"playoffs",label:"Eliminatorias"},{key:"selecciones",label:"Selecciones"}].map(n=>(
+          {[{key:"tabla",label:"Tabla"},{key:"sorpresas",label:"Sorpresas"},{key:"grupos",label:"Grupos"},{key:"playoffs",label:"Eliminatorias"},{key:"selecciones",label:"Selecciones"}].map(n=>(
             <button key={n.key} onClick={()=>setTab(n.key)} style={{background:"none",border:"none",cursor:"pointer",padding:"12px 14px",fontSize:12,fontWeight:tab===n.key?700:400,color:tab===n.key?C.text:C.textSub,borderBottom:tab===n.key?`2px solid ${C.text}`:"2px solid transparent",transition:"all .12s",whiteSpace:"nowrap"}}>
               {n.label}
             </button>
