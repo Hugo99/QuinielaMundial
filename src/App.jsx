@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 // ─── ASIGNACIONES FIJAS ───────────────────────────────────────────────────────
 const FIXED_PARTICIPANTS = [
-  "Jaz","Karim","Majo","Juan","Sergio","Ismene y Poncho",
-  "Kris","Omar","Lalo","Reyna y Antonio","Bernardo",
-  "Roberto","Ale P","Toyos","Ale B","Hugo"
+  "Ale B","Ale P","Bernardo","Hugo","Ismene y Poncho",
+  "Jaz","Juan","Karim","Kris","Lalo",
+  "Majo","Omar","Reyna y Antonio","Roberto","Sergio","Toyos"
 ];
 
 const FIXED_ASSIGNMENTS = {
