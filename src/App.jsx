@@ -180,10 +180,12 @@ function normName(n){ return ESPN_MAP[n]||n; }
 
 async function fetchLiveScores(){
   try{
-    const r=await fetch("https://site.api.espn.com/apis/site/v2/sports/soccer/FIFA.WORLD/scoreboard",{cache:"no-store"});
-    if(!r.ok) throw new Error("ESPN "+r.status);
-    const data=await r.json();
-    return data.events||[];
+    const espnUrl = "https://site.api.espn.com/apis/site/v2/sports/soccer/FIFA.WORLD/scoreboard";
+    const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(espnUrl)}`;
+    const r = await fetch(proxy, {cache:"no-store"});
+    if(!r.ok) throw new Error();
+    const data = JSON.parse((await r.json()).contents);
+    return data.events || [];
   }catch(e){ console.warn("ESPN:",e); return []; }
 }
 
